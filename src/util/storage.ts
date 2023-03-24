@@ -1,4 +1,4 @@
-import { Storage, Storage_session } from '@/type/storage';
+import { Storage, Storage_session } from '@/type/storage'
 
 export const getLocalStorage = (key: Storage): string | null => {
   return window.localStorage.getItem(key);
