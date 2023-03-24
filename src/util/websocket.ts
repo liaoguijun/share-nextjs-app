@@ -27,7 +27,6 @@ class RealSocket {
   SendMsgAry = []; //发送消息队列
   TaskInterval: NodeJS.Timer | null = null;
   PingPongTime = 0;
-  CloseFlag = true; // ws是否关闭
 
   constructor() {}
 
@@ -49,7 +48,6 @@ class RealSocket {
       this.ws.send(JSON.stringify({ ping: new Date().getTime() }));
     }, 30000);
 
-    this.CloseFlag = false;
     this.isReady = true;
   }
 

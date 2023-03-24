@@ -7,11 +7,11 @@ const port = 3300;
 const app = next({ dev: true });
 const handle = app.getRequestHandler();
 
-let target = ""; // 开发环境
+let target = "/api"; // 开发环境
 if (process.env.PACKAGE_ENV === "ALPHA") {
-  target = ""; //测试环境
+  target = "/api"; //测试环境
 } else if (process.env.PACKAGE_ENV === "RELEASE") {
-  target = ""; // 正式环境
+  target = "/api"; // 正式环境
 }
 
 const proxyTable = {
