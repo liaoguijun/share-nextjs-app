@@ -14,6 +14,15 @@ const nextConfig = {
   env: {
     ...getWebConfig(),
   },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/:path((?!another-page$).*)',
+  //       permanent: false,
+  //       destination: '/index',
+  //     }
+  //   ]
+  // }
 };
 
 module.exports = nextConfig;
